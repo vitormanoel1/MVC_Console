@@ -20,5 +20,24 @@ namespace MVC_Console.View
                 Console.ResetColor();
             }
         }
+
+        //
+        public Produto CadastrarProduto()
+        {
+            Produto produto = new Produto();
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine($"digite o còdigo do produto: ");
+            produto.Codigo = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"digite o nome do produto: ");
+            produto.Nome = Console.ReadLine();
+            
+            Console.WriteLine($"digite o preço do produto: ");
+            produto.Preco = float.Parse(Console.ReadLine());
+
+            Console.ResetColor();
+            return produto;
+        }
     }
 }
